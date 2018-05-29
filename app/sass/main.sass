@@ -38,6 +38,37 @@ body
 b, strong
 	font-weight: bold
 
-
-
+.header
+	.header__top
+		padding: 3px 0
+		border-bottom: 1px solid #ebebeb
+		.header__social
+			a
+				color: $text-dark
+				text-decoration: none
+				margin-right: 1em
+		.header__form
+			display: flex
+			align-items: center
+			position: relative
+			justify-content: flex-end
+			.header__form_text
+				font-size: 14px
+				margin-bottom: 0
+				margin-right: 1em
+				font-family: "QuicksandBold", serif
+			.header__form_input
+				font-size: 14px
+				border-radius: 15px
+				height: 28px
+				padding-left: 10px
+			.header__form_button
+				height: 31px
+				width: 31px
+				border-radius: 50%
+				background-color: #fc6c3f
+				border: none
+				outline: none
+				position: absolute
+				right: -3px
 @import "media" // Always at the end
