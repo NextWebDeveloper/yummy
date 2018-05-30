@@ -38,6 +38,15 @@ body
 b, strong
 	font-weight: bold
 
+ul 
+	padding: 0	
+	margin: 0
+// Special classes
+.hidden-show-block
+	display: block!important	
+.active-color-accent		
+	color: $accent!important
+
 .header
 	.header__top
 		padding: 3px 0
@@ -47,6 +56,8 @@ b, strong
 				color: $text-dark
 				text-decoration: none
 				margin-right: 1em
+				&:last-child
+					margin-right: 0
 		.header__form
 			display: flex
 			align-items: center
@@ -56,19 +67,97 @@ b, strong
 				font-size: 14px
 				margin-bottom: 0
 				margin-right: 1em
-				font-family: "QuicksandBold", serif
-			.header__form_input
-				font-size: 14px
-				border-radius: 15px
-				height: 28px
-				padding-left: 10px
-			.header__form_button
-				height: 31px
-				width: 31px
-				border-radius: 50%
-				background-color: #fc6c3f
-				border: none
-				outline: none
-				position: absolute
-				right: -3px
+				font-family: $headers-font
+			.form__wrapper
+				position: relative
+				width: 350px
+				max-width: 350px
+				
+				.header__form_input
+					font-size: 14px
+					border-radius: 15px
+					height: 28px
+					padding-left: 10px
+					width: 100%
+				.header__form_button
+					height: 29px
+					width: 29px
+					border-radius: 50%
+					background-color: $accent
+					border: none
+					outline: none
+					position: absolute
+					right: -1px
+					padding: 0
+					cursor: pointer
+	.header__middle
+		.header__logo
+			padding: 35px 0 20px 0
+			font-size: 60px
+			font-family: $logo-font
+			font-weight: 400
+			text-decoration: none
+			color: $text-dark
+		.header__menu-button
+			width: 100%
+			background-color: $accent
+			border: none
+			outline: none
+			border-radius: 5px
+			color: #ffffff
+			font-family: $headers-font	
+			margin-bottom: 2rem
+			display: none
+		.header__nav
+			display: block
+			width: 100%
+			font-family: $headers-font
+			ul.nav__main-nav
+				list-style-type: none
+				display: flex
+				justify-content: center
+				font-size: 15px
+				li.main-nav__item
+					position: relative
+					a.main-nav__link
+						display: block
+						color: $text
+						padding: 25px 30px
+						text-decoration: none
+						position: relative
+						&:hover
+							color: $accent
+						.link__caret-down
+							margin-left: 5px	
+							position: absolute
+							top: 40%
+					ul.main-nav__submenu
+						position: absolute
+						z-index: 10
+						list-style-type: none
+						background-color: yellow
+						border: 1px solid rgba(0, 0, 0, 0.7)
+						border-radius: 5px
+						display: none
+						li.submenu__item
+							a.submenu__link	
+								display: block
+								color: $text
+								padding: 4px 20px
+								text-decoration: none
+								&:hover
+									color: $accent
+
+.top-slider
+	padding-bottom: 20px
+	.top-slider__slider
+		.top-slider__item
+			width: 15%
+			margin-left: 5px
+			margin-right: 5px
+			.top-slider__img
+				width: 100%	
+
+
+// 'Shadows Into Light Two', cursive
 @import "media" // Always at the end

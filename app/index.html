@@ -26,15 +26,17 @@
 	<!-- Font-awesome End -->
 	<link rel="stylesheet" href="css/main.min.css">
 
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> 
+	
 </head>
 
 <body>
 
 	<header id="header" class="header">
 		<div class="header__top">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
-					<div class="col-xs-12 col-sm-3">
+					<div class="col-12 col-md-3">
 						<div class="header__social">
 							<a href="#"><i class="fab fa-facebook-f"></i></a>
 							<a href="#"><i class="fab fa-instagram"></i></a>
@@ -43,21 +45,79 @@
 							<a href="#"><i class="fab fa-google-plus-g"></i></a>
 						</div>
 					</div>
-					<div class="col-xs-12 col-sm-9">
+					<div class="col-12 col-md-9">
 						<form action="mailto:cook@gmail.com" class="header__form">
 							<p class="header__form_text">Subscribe to get notifications about my new posts and recipes</p>
-							<input class="header__form_input" type="text" placeholder="Your email">
-							<button class="header__form_button"><i class="far fa-envelope"></i></button>
+							<div class="form__wrapper">
+								<input class="header__form_input" type="text" placeholder="Your email">
+								<button class="header__form_button"><i class="far fa-envelope"></i></button>
+							</div>	
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="header__middle"></div>
-		<div class="header__bottom"></div>
+		<div class="header__middle">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 d-flex justify-content-center">
+						<a href="#" class="header__logo">Yummy Blog</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<button class="header__menu-button" type="button"><i class="fas fa-bars"></i> Menu</button>
+					</div>
+				</div>
+				<div class="row">
+					<nav class="header__nav">
+						<ul class="nav__main-nav">
+							<li class="main-nav__item"><a href="#" class="main-nav__link">HOME</a></li>
+							<li class="main-nav__item"><a href="#" class="main-nav__link first-level-link">PAGES<i class="fas fa-caret-down link__caret-down"></i></a>
+								<ul class="main-nav__submenu">
+									<li class="submenu__item"><a href="#" class="submenu__link">BLOG</a></li>
+									<li class="submenu__item"><a href="#" class="submenu__link">RECIPES</a></li>
+									<li class="submenu__item"><a href="#" class="submenu__link">ARCHIVE</a></li>
+									<li class="submenu__item"><a href="#" class="submenu__link">CONTACT</a></li>
+								</ul>
+							</li>
+							<li class="main-nav__item"><a href="#" class="main-nav__link">FEATURES</a></li>
+							<li class="main-nav__item"><a href="#" class="main-nav__link">CATEGORIES</a></li>
+							<li class="main-nav__item"><a href="#" class="main-nav__link">ARCHIVE</a></li>
+							<li class="main-nav__item"><a href="#" class="main-nav__link">ABOUT</a></li>
+							<li class="main-nav__item"><a href="#" class="main-nav__link">CONTACT</a></li>
+						</ul>
+					</nav>
+				</div>				
+			</div>
+		</div>
 	</header>
-
+	<section id="top-slider" class="top-slider">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<div class="top-slider__slider">
+						<div class="top-slider__item"><img class="top-slider__img" src="img/bg-img/slide-1.jpg" alt="1"></div>
+						<div class="top-slider__item"><img class="top-slider__img" src="img/bg-img/slide-2.jpg" alt="2"></div>
+						<div class="top-slider__item"><img class="top-slider__img" src="img/bg-img/slide-3.jpg" alt="3"></div>
+						<div class="top-slider__item"><img class="top-slider__img" src="img/bg-img/slide-4.jpg" alt="4"></div>
+						<div class="top-slider__item"><img class="top-slider__img" src="img/bg-img/slide-2.jpg" alt="2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="main" class="main">
+		<container>
+			<div class="row justify-content-center">
+				<div class="col-12 col-lg-8"></div>
+				<div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+					<aside></aside>
+				</div>
+			</div>
+		</container>
+	</section>
 	<script src="js/scripts.min.js"></script>
-
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>

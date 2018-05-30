@@ -29,3 +29,42 @@
 
 // ≤1200px
 +media-breakpoint-up(xl)
+
+
+@media only screen and (max-width: 992px)
+	.header
+		.header__middle
+			.header__nav
+				ul.nav__main-nav
+					li.main-nav__item
+						a.main-nav__link
+							padding: 20px 20px
+
+@media only screen and (max-width: 768px)
+	.header
+		.header__top
+			.header__social
+				a 
+					margin-right: 0.5em
+			.header__form	
+				flex-direction: column
+				align-items: flex-start
+				.form__wrapper					
+					.header__form_input
+						width: 100%	
+		.header__middle
+			.header__menu-button
+				display: block
+			.header__nav
+				display: none
+				ul.nav__main-nav
+					flex-direction: column
+					margin-left: 20px
+					li.main-nav__item
+						a.main-nav__link
+							padding: 8px 30px
+							.link__caret-down
+								top: 30%
+						ul.main-nav__submenu
+							left: 140px	
+							top: 0px	
