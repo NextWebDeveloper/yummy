@@ -47,6 +47,13 @@ ul
 .active-color-accent		
 	color: $accent!important
 
+h1, h2, h3, h4, h5, h6 
+	font-family: $headers-font
+	color: $text-dark
+h6 
+	font-size: 16px
+	
+
 .header
 	.header__top
 		padding: 3px 0
@@ -158,6 +165,151 @@ ul
 			.top-slider__img
 				width: 100%	
 
+/* Custom properties for .main start here */	
+.main	
+	.post__information
+		width: 100%
+		font-size: 14px
+		margin: 1rem 0
+		display: flex
+		justify-content: space-between
+		&_left
+			p
+				margin-bottom: 0
+				.post__date
+					margin-left: 12px
+					padding-left: 16px
+					border-left: 1px solid $text	
+		&_right		
+			a 
+				margin-left: 10px	
+				text-decoration: none
+				color: $text
+				span 
+					margin-left: 2px
 
+	.post__button
+		display: inline-block
+		color: rgb(181, 174, 186)
+		padding: 8px 25px
+		border: 1px solid rgb(181, 174, 186)
+		border-radius: 19px
+		margin-top: 0.5rem
+		font-size: 14px
+		text-decoration: none
+		&:hover
+			color: $text-dark
+			border-color: $text-dark							
+/* Custom properties end here */		
+
+.main	
+	.main__promo-post
+		.promo-post__header
+			font-size: 32px
+			line-height: 40px
+		.promo-post__img	
+			width: 100%
+			border-radius: 30px
+		.post__information // Custom property
+		.promo-post__text
+		.post__button // Custom property
+	.main__post
+		margin-top: 2rem
+		.post__img
+			width: 100%
+			border-radius: 20px	
+		.post__information // Custom property
+		.post__header
+			font-size: 24px
+			&_link
+				text-decoration: none
+	.main__divide-header
+		background-color: lighten($accent, 25%)
+		border-radius: 5px
+		margin-top: 1rem
+		h6 
+			padding: 5px 0
+			margin: 0			
+	.featured-post
+		display: flex
+		margin-top: 1rem
+		.featured-post__img
+			flex-basis: 50%
+			border-radius: 20px
+		.featured-post__aside
+			flex-basis: 50%
+			padding-left: 15px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: flex-start
+			padding-bottom: 1rem
+			.post__information // Custom property
+			.featured-post__header
+				font-size: 24px
+				&_link					
+			.featured-post__text
+			.post__button	// Custom property	 		
+
+	.aside__block
+		padding-bottom: 50px
+		.aside__header
+			background-color: lighten($accent, 25%)
+			border-radius: 5px
+			h6 
+				padding: 5px 0
+				margin: 0
+		.aside__author-img
+			height: 200px
+			padding-top: 30px
+			box-sizing: content-box		
+			img 
+				height: 100%
+				border-radius: 50%
+		.aside__author-name	
+			h4 
+				font-family: $logo-font
+				font-size: 24px
+				font-weight: 400
+				margin-top: 15px
+		.aside__author-about	
+		.aside__social
+			margin-top: 50px
+			a
+				color: $text-dark
+				text-decoration: none
+				margin-right: 1.5em
+				&:last-child
+					margin-right: 0	
+		.aside__cookbook
+			background: linear-gradient(0deg, rgba(0,0,0,0.99), rgba(252, 122, 0,0.6)), url('../img/sidebar-img/6.jpg') no-repeat center /cover
+			padding: 50px 0
+			border-radius: 30px
+			.cookbook__header
+				color: #ffffff
+				font-size: 32px				
+			.cookbook__text
+				color: #ffffff
+				font-size: 14px
+			.cookbook_order-button
+				display: inline-block
+				color: $accent
+				padding: 8px 25px
+				border: 1px solid $accent
+				border-radius: 19px		
+				text-decoration: none
+				&:hover
+					color: #ffffff
+					background-color: $accent
+		.aside__card	
+			display: block
+			margin-top: 30px
+			color: $text
+			text-decoration: none
+			.aside__card_img
+				img
+					width: 100%
+					border-radius: 20px
+			.aside__card_header		
 // 'Shadows Into Light Two', cursive
 @import "media" // Always at the end
