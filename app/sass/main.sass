@@ -79,7 +79,6 @@ h6
 				position: relative
 				width: 350px
 				max-width: 350px
-				
 				.header__form_input
 					font-size: 14px
 					border-radius: 15px
@@ -95,6 +94,7 @@ h6
 					outline: none
 					position: absolute
 					right: -1px
+					top: 0
 					padding: 0
 					cursor: pointer
 	.header__middle
@@ -159,7 +159,6 @@ h6
 	padding-bottom: 20px
 	.top-slider__slider
 		.top-slider__item
-			width: 15%
 			margin-left: 5px
 			margin-right: 5px
 			.top-slider__img
@@ -167,6 +166,7 @@ h6
 
 /* Custom properties for .main start here */	
 .main	
+	padding-bottom: 100px
 	.post__information
 		width: 100%
 		font-size: 14px
@@ -194,13 +194,12 @@ h6
 		padding: 8px 25px
 		border: 1px solid rgb(181, 174, 186)
 		border-radius: 19px
-		margin-top: 0.5rem
 		font-size: 14px
 		text-decoration: none
 		&:hover
 			color: $text-dark
 			border-color: $text-dark							
-/* Custom properties end here */		
+/* Custom properties for .main end here */		
 
 .main	
 	.main__promo-post
@@ -233,9 +232,11 @@ h6
 	.featured-post
 		display: flex
 		margin-top: 1rem
-		.featured-post__img
-			flex-basis: 50%
-			border-radius: 20px
+		.featured-post__img-wrapper
+			width: 50%
+			.featured-post__img
+				width: 100%
+				border-radius: 20px
 		.featured-post__aside
 			flex-basis: 50%
 			padding-left: 15px
@@ -247,10 +248,33 @@ h6
 			.post__information // Custom property
 			.featured-post__header
 				font-size: 24px
-				&_link					
+				&_link
+					h3
+						margin: 0px					
 			.featured-post__text
 			.post__button	// Custom property	 		
 
+
+	.search-form
+		margin: 1rem 0 1rem
+		.search-form__input
+			font-size: 14px
+			border-radius: 15px
+			height: 28px
+			padding: 15px
+			width: 100%
+		.search-form__button
+			height: 32px
+			width: 32px
+			border-radius: 50%
+			background-color: $accent
+			border: none
+			outline: none
+			position: absolute
+			right: 2px
+			top: 15px
+			padding: 0
+			cursor: pointer
 	.aside__block
 		padding-bottom: 50px
 		.aside__header
@@ -311,5 +335,12 @@ h6
 					width: 100%
 					border-radius: 20px
 			.aside__card_header		
+
+.bottom-slider
+	margin-bottom: 50px
+	.bottom-slider__slider
+		.bottom-slider__item
+			.bottom-slider__img
+				width: 100%					
 // 'Shadows Into Light Two', cursive
 @import "media" // Always at the end
