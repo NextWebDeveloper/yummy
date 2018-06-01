@@ -52,7 +52,65 @@ h1, h2, h3, h4, h5, h6
 	color: $text-dark
 h6 
 	font-size: 16px
-	
+
+/* Custom properties start here */		
+.header__logo, .footer__logo
+	padding: 35px 0 20px 0
+	font-size: 60px
+	font-family: $logo-font
+	font-weight: 400
+	text-decoration: none
+	color: $text-dark
+	&:hover
+		text-decoration: none
+		color: $text-dark
+
+.header__menu-button, .footer__menu-button
+	width: 100%
+	background-color: $accent
+	border: none
+	outline: none
+	border-radius: 5px
+	color: #ffffff
+	font-family: $headers-font	
+	margin-bottom: 2rem
+	display: none
+
+.main	
+	padding-bottom: 100px
+	.post__information
+		width: 100%
+		font-size: 14px
+		margin: 1rem 0
+		display: flex
+		justify-content: space-between
+		&_left
+			p
+				margin-bottom: 0
+				.post__date
+					margin-left: 12px
+					padding-left: 16px
+					border-left: 1px solid $text	
+		&_right		
+			a 
+				margin-left: 10px	
+				text-decoration: none
+				color: $text
+				span 
+					margin-left: 2px
+
+	.post__button
+		display: inline-block
+		color: rgb(181, 174, 186)
+		padding: 8px 25px
+		border: 1px solid rgb(181, 174, 186)
+		border-radius: 19px
+		font-size: 14px
+		text-decoration: none
+		&:hover
+			color: $text-dark
+			border-color: $text-dark							
+/* Custom properties end here */
 
 .header
 	.header__top
@@ -98,23 +156,8 @@ h6
 					padding: 0
 					cursor: pointer
 	.header__middle
-		.header__logo
-			padding: 35px 0 20px 0
-			font-size: 60px
-			font-family: $logo-font
-			font-weight: 400
-			text-decoration: none
-			color: $text-dark
-		.header__menu-button
-			width: 100%
-			background-color: $accent
-			border: none
-			outline: none
-			border-radius: 5px
-			color: #ffffff
-			font-family: $headers-font	
-			margin-bottom: 2rem
-			display: none
+		.header__logo // Custom property
+		.header__menu-button // Custom property
 		.header__nav
 			display: block
 			width: 100%
@@ -124,6 +167,7 @@ h6
 				display: flex
 				justify-content: center
 				font-size: 15px
+				color: $text-dark
 				li.main-nav__item
 					position: relative
 					a.main-nav__link
@@ -142,14 +186,14 @@ h6
 						position: absolute
 						z-index: 10
 						list-style-type: none
-						background-color: yellow
+						background-color: #fff
 						border: 1px solid rgba(0, 0, 0, 0.7)
 						border-radius: 5px
 						display: none
 						li.submenu__item
 							a.submenu__link	
+								color: inherit
 								display: block
-								color: $text
 								padding: 4px 20px
 								text-decoration: none
 								&:hover
@@ -163,43 +207,6 @@ h6
 			margin-right: 5px
 			.top-slider__img
 				width: 100%	
-
-/* Custom properties for .main start here */	
-.main	
-	padding-bottom: 100px
-	.post__information
-		width: 100%
-		font-size: 14px
-		margin: 1rem 0
-		display: flex
-		justify-content: space-between
-		&_left
-			p
-				margin-bottom: 0
-				.post__date
-					margin-left: 12px
-					padding-left: 16px
-					border-left: 1px solid $text	
-		&_right		
-			a 
-				margin-left: 10px	
-				text-decoration: none
-				color: $text
-				span 
-					margin-left: 2px
-
-	.post__button
-		display: inline-block
-		color: rgb(181, 174, 186)
-		padding: 8px 25px
-		border: 1px solid rgb(181, 174, 186)
-		border-radius: 19px
-		font-size: 14px
-		text-decoration: none
-		&:hover
-			color: $text-dark
-			border-color: $text-dark							
-/* Custom properties for .main end here */		
 
 .main	
 	.main__promo-post
@@ -254,7 +261,6 @@ h6
 			.featured-post__text
 			.post__button	// Custom property	 		
 
-
 	.search-form
 		margin: 1rem 0 1rem
 		.search-form__input
@@ -275,6 +281,7 @@ h6
 			top: 15px
 			padding: 0
 			cursor: pointer
+			
 	.aside__block
 		padding-bottom: 50px
 		.aside__header
@@ -337,10 +344,61 @@ h6
 			.aside__card_header		
 
 .bottom-slider
-	margin-bottom: 50px
 	.bottom-slider__slider
 		.bottom-slider__item
 			.bottom-slider__img
 				width: 100%					
-// 'Shadows Into Light Two', cursive
+
+.footer
+	.footer__top
+		padding: 50px 0
+		border-bottom: 1px solid #ebebeb
+		.footer__social
+			display: flex
+			justify-content: space-between
+			.footer__social_link
+				display: block
+				color: $text
+				padding: 8px
+				text-decoration: none
+				span
+					margin-left: 5px
+	.footer__middle
+		padding-bottom: 35px
+		border-bottom: 1px solid #ebebeb
+		.footer__logo // Custom property
+		.footer__menu-button // Custom property
+		.footer__nav
+			display: flex
+			justify-content: center
+			font-size: 15px
+			font-family: $headers-font
+			.footer__nav_link
+				display: block
+				color: $text-dark
+				text-decoration: none
+				margin-right: 25px
+				&:hover
+					color: $accent
+				&:last-child
+					margin-right: 0
+	.footer__bottom
+		position: relative
+		padding: 1.5rem 0
+		.footer__scrollTop
+			position: absolute
+			left: 49%
+			top: -17px
+			color: $accent
+			background-color: transparent 
+			border: none
+			outline: none
+			z-index: 100
+		.footer__copyright
+			.footer__copyright_text
+				padding: 0
+				margin: 0
+				font-size: 15px
+				.colorlib
+
 @import "media" // Always at the end

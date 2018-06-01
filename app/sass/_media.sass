@@ -39,20 +39,25 @@
 					li.main-nav__item
 						a.main-nav__link
 							padding: 20px 20px
-
+	.footer
+		.footer__top
+			.footer__social
+				.footer__social_link
+					span
+						display: none
 @media only screen and (max-width: 768px)
 	.header
 		.header__top
 			.header__social
 				a 
-					margin-right: 0.5em
+					margin-right: 0.5em     //Top social links regulation
 			.header__form	
 				flex-direction: column
 				align-items: flex-start
 				.form__wrapper					
 					.header__form_input
-						width: 100%	
-		.header__middle
+						width: 100%						
+		.header__middle             	// Top respnonsive menu start
 			.header__menu-button
 				display: block
 			.header__nav
@@ -67,9 +72,27 @@
 								top: 30%
 						ul.main-nav__submenu
 							left: 140px	
-							top: 0px	
-	.main						
+							top: 0px	          // Top respnonsive menu end								
+	.main															
 		.featured-post
 			flex-direction: column
 			.featured-post__img-wrapper
 				width: 100%
+	.footer                         // Bottom respnonsive menu start
+		.footer__middle
+			.footer__menu-button
+				display: block
+			.footer__nav	
+				display: none	
+				flex-direction: column
+				margin-left: 20px	
+				.footer__nav_link	
+					padding: 5px 20px       // Bottom respnonsive menu end
+
+
+@media only screen and (max-width: 768px)
+	.header
+		.header__top
+			.header__form	
+				.form__wrapper	
+					width: 100%             // User email input width
