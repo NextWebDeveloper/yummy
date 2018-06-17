@@ -35,9 +35,9 @@
 	.header
 		.header__middle
 			.header__nav
-				ul.nav__main-nav
-					li.main-nav__item
-						a.main-nav__link
+				.nav__main-nav
+					.main-nav__item
+						.main-nav__link
 							padding: 20px 20px
 	.footer
 		.footer__top
@@ -62,15 +62,16 @@
 				display: block
 			.header__nav
 				display: none
-				ul.nav__main-nav
+				.nav__main-nav
 					flex-direction: column
 					margin-left: 20px
-					li.main-nav__item
-						a.main-nav__link
-							padding: 8px 30px
+					padding: 1rem 0
+					.main-nav__item
+						.main-nav__link
+							padding: 8px 10px
 							.link__caret-down
 								top: 30%
-						ul.main-nav__submenu
+						.main-nav__submenu
 							left: 140px	
 							top: 0px	          // Top respnonsive menu end								
 	.main															
