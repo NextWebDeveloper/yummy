@@ -73,7 +73,6 @@ h6
 	border-radius: 5px
 	color: #ffffff
 	font-family: $headers-font	
-	margin-bottom: 2rem
 	display: none
 
 .main	
@@ -162,20 +161,21 @@ h6
 			display: block
 			width: 100%
 			font-family: $headers-font
-			ul.nav__main-nav
+			.nav__main-nav
 				list-style-type: none
 				display: flex
 				justify-content: center
 				font-size: 15px
 				color: $text-dark
-				li.main-nav__item
+				.main-nav__item
 					position: relative
-					a.main-nav__link
+					.main-nav__link
 						display: block
 						color: $text
 						padding: 25px 30px
 						text-decoration: none
 						position: relative
+						cursor: pointer
 						&:hover
 							color: $accent
 						.link__caret-down
